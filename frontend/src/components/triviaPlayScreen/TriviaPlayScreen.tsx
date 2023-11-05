@@ -139,11 +139,11 @@ const TriviaPlayScreen: React.FC = () => {
   }
 
   return (
-    <div className="trivia-play-screen">
+    <>
       {isLoading ? (
         <LoadingPage />
       ) : (
-        <>
+        <div className='trivia-play-screen'>
           <NavBar showButtons={false}/>
           <div className="title-container">
             <h1 className='level-title'>¿Podrás resolver el siguiente problema?</h1>
@@ -192,10 +192,10 @@ const TriviaPlayScreen: React.FC = () => {
               <img src={nextQuestion} alt="Image 2" />
             </div>
           </div>
-        </>
+        </div>
       )}
       
-    </div>
+    </>
   );
 };
 
