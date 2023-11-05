@@ -5,6 +5,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router';
 import GoProfileComponent from './isLoggedInComponent/GoProfileComponent';
 import { Value } from 'sass';
+import logo from '../assets/loading_logo.png'
 
 interface NavBarProps {
     showButtons: boolean;
@@ -162,8 +163,11 @@ const NavBar: React.FC<NavBarProps>  = ({ showButtons }) => {
 
                 <div className="container-fluid">
 
-                <a className="navbar-brand mb-0 h1" href='/'>MathCrush</a>
-
+                <div className='logo' style={{display: 'flex', alignItems:'center', justifyContent:'center'}}>
+                    <img src={logo} alt="" onClick={() => navigate('/')} style={{width:'35px', height: '35px', marginRight:'10px', cursor: 'pointer'}}/>
+                    <a className="navbar-brand mb-0 h1" href='/'>MathCrush</a>
+                </div>
+                
                 <div className="collapse navbar-collapse" id="navbarButtons">
                     <>{!isLoggedIn ? <div className='navbar-nav ms-auto'><GoProfileComponent onClickMyNotes={handleMyNotes} onClickMyProfile={handleMyProfile} onClickCloseSession={handleCloseSession}/></div> : <ul className="navbar-nav ms-auto">
                                                 <button type="button" className="btn" style={{margin:'5px', backgroundColor: '#FFFFFF', color: '#353535', fontWeight: 'bold', borderColor: '#353535', borderWidth: '2px'}} onClick={openModal}>Iniciar sesión</button>
