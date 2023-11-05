@@ -155,9 +155,7 @@ export class UserService {
         currentLevel: 0,
       });
 
-      await this.progressRepository.save(newProgress).catch((err) => {
-        console.log(err);
-      });
+      await this.progressRepository.save(newProgress).catch((err) => {});
 
       return 0;
     }
@@ -202,11 +200,8 @@ export class UserService {
           user.book.push(question.theorem);
           await this.userRepository.save(user);
         }
-        console.log('userProgress', userProgress);
 
-        await this.progressRepository.save(userProgress).catch((err) => {
-          console.log(err);
-        });
+        await this.progressRepository.save(userProgress).catch((err) => {});
       }
     }
   }

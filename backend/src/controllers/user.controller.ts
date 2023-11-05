@@ -37,7 +37,6 @@ export class UserController {
   async getUsers(@Res() response, @Param('id') id) {
     try {
       const user = await this.userService.getUser(id);
-      console.log(user);
       return response.status(HttpStatus.OK).json(user);
     } catch (HttpException) {
       return response

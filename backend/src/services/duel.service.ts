@@ -182,7 +182,6 @@ export class DuelService {
       duel.players = [player];
     }
 
-    console.log('players', duel.players);
     await this.duelRepository.save(duel);
     return true;
   }

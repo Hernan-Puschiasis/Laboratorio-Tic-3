@@ -70,18 +70,14 @@ export class TriviaQuestionService {
     const filter = { where: { universe: universe, galaxy: galaxy } };
     const questions = await this.triviaQuestionRepository.find(filter);
 
-    console.log('QQ: ', questions);
     const shuffle = (array: TriviaQuestion[]) => {
       return array.sort(() => Math.random() - 0.5);
     };
     const shuffledArray = shuffle(questions).slice(0, numberOfQuestions);
-    console.log('QQ2: ', shuffledArray);
 
     for (const q of shuffledArray) {
       q.answer = '';
     }
-
-    console.log('QQ2: ', shuffledArray);
 
     return shuffledArray;
   }
