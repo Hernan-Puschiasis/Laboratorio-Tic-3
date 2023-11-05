@@ -24,6 +24,8 @@ export class DuelGateway
 
   constructor(private readonly duelService: DuelService) {}
 
+  private rightAnswers: Map<string, number> = new Map();
+
   @WebSocketServer() server: Server;
 
   afterInit(): void {
@@ -136,13 +138,24 @@ export class DuelGateway
 
     answers.add(client.data.userId);
 
+    if (!this.rightAnswers.has(data.duelId)) {
+      this.rightAnswers.set(data.duelId, 0);
+    }
+
     // Validate the answer
     const isCorrect = await this.duelService.checkAnswerAndUpdate(
       data.duelId,
       data.answer,
       client.data.userId,
-      answers,
+      this.rightAnswers.get(data.duelId),
     );
+
+    if (isCorrect) {
+      this.rightAnswers.set(
+        data.duelId,
+        this.rightAnswers.get(data.duelId) + 1,
+      );
+    }
 
     this.server.to(data.duelId).emit('answered', {
       isCorrect: isCorrect,
@@ -153,6 +166,7 @@ export class DuelGateway
 
     if (allReady) {
       this.readyClients.delete(data.duelId);
+      this.rightAnswers.delete(data.duelId);
       const nextQuestion = await this.duelService.endRound(data.duelId);
       if (!nextQuestion) {
         this.server

@@ -96,7 +96,7 @@ export class DuelService {
     duelId: string,
     playerAnswer: string,
     playerId: number,
-    answers: Set<string>,
+    answers: number,
   ): Promise<boolean> {
     const duel = await this.getDuel(duelId);
     const question = duel.questions[duel.currentRound];
@@ -111,12 +111,14 @@ export class DuelService {
     const currentScore = duel.playerScores[user.username] || 0;
 
     if (is_correct) {
-      if (answers.size == 1) {
-        duel.playerScores[user.username] = currentScore + 3;
-      } else if (answers.size == 2) {
-        duel.playerScores[user.username] = currentScore + 2;
+      if (answers == 0) {
+        duel.playerScores[user.username] = currentScore + 100;
+      } else if (answers == 1) {
+        duel.playerScores[user.username] = currentScore + 75;
+      } else if (answers == 2) {
+        duel.playerScores[user.username] = currentScore + 50;
       } else {
-        duel.playerScores[user.username] = currentScore + 1;
+        duel.playerScores[user.username] = currentScore + 25;
       }
     } else {
       duel.playerScores[user.username] = currentScore;
