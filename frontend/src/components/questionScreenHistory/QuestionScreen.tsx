@@ -168,7 +168,7 @@ const QuestionScreen: React.FC<{}> = () => {
                 <div className="center-theorem">
                   <div className="theorem-container">
                     <h2 className="theorem-title">{question.theorem.name}</h2>
-                    <p className="theorem-body">{question.theorem.statement}</p>
+                    <div><p className="theorem-body"><Latex>{question.theorem.statement}</Latex></p></div>
                   </div>
                 </div>
               )}

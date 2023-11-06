@@ -80,9 +80,9 @@ const MyNotes: React.FC = () => {
                                 <h2 className='theorem-title-notes'>{theorem.name}</h2>
                             </div>
                             <div className='theorem-container-cotent'>
-                                <p className='theorem-txt-body'>{theorem.statement}</p>
+                                <div className='theorem-txt-body'><p className='theorem-txt-body'>{theorem.statement}</p></div>
                                 <p className='demo-txt-title'>Demostración:</p>
-                                <p className='theorem-txt-body'>{theorem.proof}</p>
+                                <div className='theorem-txt-body'><p className='theorem-txt-body'>{theorem.proof}</p></div>
                             </div>
                             <div className='theorem-page-footer'>
                                 {count > 0 ?
