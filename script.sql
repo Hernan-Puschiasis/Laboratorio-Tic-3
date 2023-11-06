@@ -111,7 +111,7 @@ VALUES ('Sea $$P(x) = x^3-3x^2+2x$$. ¿Cuál es la raíz más grande del polinom
 INSERT INTO question (body, answer, type, category, "worldId")
 VALUES ('Sea $$P(x) = x^3-6x^2+9x$$. ¿Cuál es el producto de las dos raíces más grandes del polinomio?', '9', '1', '1', 1);
 
-INSERT INTO theorem (name,statement,proof) values('Raíz evidente 1', 'Se considera el polinomio $$p(x) = a_n x^n + a_{n - 1} x^{n - 1} + \dots + a_1 x + a_0$$. Si $$a_n + a_{n - 1} +\dots + a_1 + a_0 = 1$$ entonces $$x=1$$ es raíz del polinomio.', 'Notemos que $$p(1) = a_n + a_{n - 1} +\dots + a_1 + a_0 = 1$ por hipótesis. Por definición $$x=1$$ es raíz de $$p(x)$$.');
+INSERT INTO theorem (name,statement,proof) values('Raíz evidente 1', 'Se considera el polinomio $$p(x) = a_n x^n + a_{n - 1} x^{n - 1} + \dots + a_1 x + a_0$$. Si $$a_n + a_{n - 1} +\dots + a_1 + a_0 = 1$$ entonces $$x=1$$ es raíz del polinomio.', 'Notemos que $$p(1) = a_n + a_{n - 1} +\dots + a_1 + a_0 = 1$$ por hipótesis. Por definición $$x=1$$ es raíz de $$p(x)$$.');
 
 INSERT INTO question (body, answer, type, category, "worldId", "theoremId")
 VALUES ('Sea $$P(x) = x^3-x^2-x+1$$. ¿Cuál es la suma de las raíces del polinomio?', '1', '1', '1', 1, 2);
@@ -122,7 +122,7 @@ VALUES ('Sea $$P(x) = x^3+x^2-x-1$$. ¿Cuál es el producto de las raíces del p
 INSERT INTO question (body, answer, type, category, "worldId")
 VALUES ('Sea $$P(x) = x^3-5x^2+8x-4$$. ¿Cuál es la suma de las raíces del polinomio?', '5', '1', '1', 1);
 
-INSERT INTO theorem (name,statement,proof) values('Teorema del Resto', 'Sea $$P(x)$$ un polinomio. El residuo resultante R(x) de dividir $$P(x)$$ entre $$F(x) = x - a$$ es igual a evaluar a $$P(x)$$ en $$a$$.', 'Por definición de división de polinomios se sabe que $$P(x) = Q(x)(x-a) + R(x)$$ con el grado de $$R(x)$$ menor al de $$F(x)$$, por lo que $$R(x)$$ tiene grado $$0$$ y es constante. Si se evalúa el polinomio en $$a$$ se obtiene que $$P(a) = Q(a)(a-a) + R(a) = R(a)$$. Como $$R(x)$$ es contante, se obtiene que $$R(x) = P(a)$$, como se quería probar.');
+INSERT INTO theorem (name,statement,proof) values('Teorema del Resto', 'Sea $$P(x)$$ un polinomio. El residuo resultante $$R(x)$$ de dividir $$P(x)$$ entre $$F(x) = x - a$$ es igual a evaluar a $$P(x)$$ en $$a$$.', 'Por definición de división de polinomios se sabe que $$P(x) = Q(x)(x-a) + R(x)$$ con el grado de $$R(x)$$ menor al de $$F(x)$$, por lo que $$R(x)$$ tiene grado $$0$$ y es constante. Si se evalúa el polinomio en $$a$$ se obtiene que $$P(a) = Q(a)(a-a) + R(a) = R(a)$$. Como $$R(x)$$ es contante, se obtiene que $$R(x) = P(a)$$, como se quería probar.');
 
 INSERT INTO question (body, answer, type, category, "worldId", "theoremId")
 VALUES ('¿Cuál es el resto de dividir $$x^3+x^2+x$$ entre $$x$$?', '0', '1', '1', 1,3);
@@ -194,10 +194,10 @@ INSERT INTO trivia_question (body, answer, type, category, universe, galaxy, opt
 VALUES ('Resuelve la siguiente integral $$\int_0^{2\pi} cos(x) dx$$.', '$$0$$', '1', 'Universidad', 'AM2', '1', '$$\pi$$', '$$0$$', '$$2\pi$$', '$$4\pi$$');
 
 INSERT INTO trivia_question (body, answer, type, category, universe, galaxy, option1, option2, option3, option4)
-VALUES ('¿Cuál de las siguientes opciones es una solución a la siguiente ecuación diferencial $$\frac{dy}{dx}=y$$?', 'Answer', '1', '1', 'Universidad', 'AM2', '$$e^{2x}$$', '$$cos(x)$$', '$$4e^x$$', '$$sin(x)$$');
+VALUES ('¿Cuál de las siguientes opciones es una solución a la siguiente ecuación diferencial $$\frac{dy}{dx}=y$$?', '$$4e^x$$', '1', '1', 'Universidad', 'AM2', '$$e^{2x}$$', '$$cos(x)$$', '$$4e^x$$', '$$sin(x)$$');
 
 INSERT INTO trivia_question (body, answer, type, category, universe, galaxy, option1, option2, option3, option4)
-VALUES ('¿Cuál es el valor de la derivada de $$sin(x)$$ en $$x=0$$?', 'Answer', '1', '1', 'Universidad', 'AM2', '$$1$$', '$$\pi$$', '$$0$$', '$$2\pi$$');
+VALUES ('¿Cuál es el valor de la derivada de $$sin(x)$$ en $$x=0$$?', '$$1$$', '1', '1', 'Universidad', 'AM2', '$$1$$', '$$\pi$$', '$$0$$', '$$2\pi$$');
 
 INSERT INTO trivia_question (body, answer, type, category, universe, galaxy, option1, option2, option3, option4)
-VALUES ('Calcula el siguiente límite $$\lim_{x\rightarrow0} \frac{sin(x)}{x}$$', 'Answer', '1', '1', 'Universidad', 'AM2', '$$\pi$$', '$$0$$', '$$1$$', '$$-1$$');
+VALUES ('Calcula el siguiente límite $$\lim_{x\rightarrow0} \frac{sin(x)}{x}$$', '$$1$$', '1', '1', 'Universidad', 'AM2', '$$\pi$$', '$$0$$', '$$1$$', '$$-1$$');

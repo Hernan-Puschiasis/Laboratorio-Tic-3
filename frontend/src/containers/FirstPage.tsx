@@ -70,7 +70,7 @@ function FirstPage() {
                 onClick={handleClickHistory}/>
 
                 <Card title="Trivia"
-                text="Llego tu momento de entrenar. Resove distintas preguntas de todos los niveles."
+                text="Llegó tu momento de entrenar. Resuelve distintas preguntas de todos los niveles."
                 imageSrc={triviaImage}
                 color="#fdf0d5"
                 font="Courier"
@@ -78,7 +78,7 @@ function FirstPage() {
                 onClick={handleClickTrivia}/>
 
                 <Card title="Duelos"
-                text="Juega y diviertete con amigos y personas online. Invitalas a una sala en un desafio imperdible."
+                text="Juega y diviértete con amigos y personas online. Invítalas a un desafío imperdible."
                 imageSrc={duelosImage}
                 color="#fdf0d5"
                 font="Courier"
@@ -88,7 +88,7 @@ function FirstPage() {
             {showPopUp && <PopupMessage
                 onClose={closePopUp}
                 title="Iniciar sesión"
-                body="Para ingresar a este modo de juego es neceseario iniciar sesión, en caso de no tener una cuenta, puede crearla usando el botón Registrarse."
+                body="Para ingresar a este modo de juego es necesario iniciar sesión. En caso de no tener una cuenta, puede crearla usando el botón Registrarse."
                 />}
             {/* <div className="container-wavy">
                 <SlideInElement

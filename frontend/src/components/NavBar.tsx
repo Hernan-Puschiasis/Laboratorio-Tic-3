@@ -207,7 +207,7 @@ const NavBar: React.FC<NavBarProps>  = ({ showButtons }) => {
                         {isDataMissing ? <p className='warning-p' style={warningPStyle}>Faltan completar datos</p> : ''}
                     </div>
                     <div className="modal-footer d-flex justify-content-center">
-                        <button className="btn btn-primary" onClick={() => handleLogin(username, password)}>Iniciar sesion</button>
+                        <button className="btn btn-primary" onClick={() => handleLogin(username, password)}>Iniciar sesión</button>
                     </div>
                     </div>
                 </div>
