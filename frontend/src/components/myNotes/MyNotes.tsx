@@ -7,6 +7,7 @@ import backTheorem from '../../assets/back_theorem.png'
 import { PATH } from '../../constants';
 import axios from 'axios';
 import { useNavigate, useLocation } from 'react-router';
+import Latex from 'react-latex';
 
 
 const MyNotes: React.FC = () => {
@@ -80,9 +81,9 @@ const MyNotes: React.FC = () => {
                                 <h2 className='theorem-title-notes'>{theorem.name}</h2>
                             </div>
                             <div className='theorem-container-cotent'>
-                                <div className='theorem-txt-body'><p className='theorem-txt-body'>{theorem.statement}</p></div>
+                                <div className='theorem-txt-body'><p className='theorem-txt-body'><Latex>{theorem.statement}</Latex></p></div>
                                 <p className='demo-txt-title'>Demostración:</p>
-                                <div className='theorem-txt-body'><p className='theorem-txt-body'>{theorem.proof}</p></div>
+                                <div className='theorem-txt-body'><p className='theorem-txt-body'><Latex>{theorem.proof}</Latex></p></div>
                             </div>
                             <div className='theorem-page-footer'>
                                 {count > 0 ?

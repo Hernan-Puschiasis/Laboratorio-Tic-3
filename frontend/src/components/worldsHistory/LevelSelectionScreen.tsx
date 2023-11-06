@@ -116,7 +116,7 @@ const LevelSelectionScreen: React.FC<{}> = () => {
         <>
           <NavBar showButtons={false}/>
           <div className="level-selection-screen">
-            <h1 className='level-title'>{galaxyName} | {worldName}</h1>
+            <h1 className='level-selection-title'>{galaxyName} | {worldName}</h1>
             <hr className="horizontal-line"/>
             <div className="level-grid">
               {levels.map((level, index) => (

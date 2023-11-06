@@ -6,7 +6,7 @@ interface DuelQuestionTimerProps{
 }
 
 const DuelQuestionTimer: React.FC<DuelQuestionTimerProps> = ({handleTimeout}) => {
-    const [seconds, setSeconds] = useState(60);
+    const [seconds, setSeconds] = useState(30);
 
     useEffect(() => {
         let interval: NodeJS.Timeout | null = null;

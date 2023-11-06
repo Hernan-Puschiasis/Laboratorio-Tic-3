@@ -4,7 +4,7 @@
 .level-selection-screen {
   text-align: center;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .level-grid {
@@ -89,7 +89,7 @@
 }
 
 /* In your CSS file or style block */
-.level-title {
+.level-selection-title {
   font-family: 'Catamaran', sans-serif;
   color: black; 
   font-size: 40px;

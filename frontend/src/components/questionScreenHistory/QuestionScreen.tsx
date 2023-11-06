@@ -43,7 +43,7 @@ const QuestionScreen: React.FC<{}> = () => {
     axios.request(config)
           .then((response) => {
             if (response.data.result.isCorrect){
-              setCorrectionText(`Respuesta ${response.data.result.answer} es correcta`)
+              setCorrectionText(`Respuesta es correcta`)
               setIsResolved(true);
             }else{
               setCorrectionText('Respuesta incorrecta')
