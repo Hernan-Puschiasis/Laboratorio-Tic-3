@@ -150,7 +150,6 @@ const TriviaPlayScreen: React.FC = () => {
           </div>
           <div className="content-container">
             <div className="trivia-question-latex-container"><Latex>{question}</Latex></div>
-            <p>Elige una opción</p>
             <ul>
               {options.map((option, index) => (
                 <li

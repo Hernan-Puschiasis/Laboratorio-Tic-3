@@ -86,6 +86,8 @@
 
 .selected-round{
     background-color: black;
+    width: 55px;
+    height: 55px;
 }
 
 .duel-is-missing-data{
