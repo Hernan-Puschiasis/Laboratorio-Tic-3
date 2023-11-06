@@ -5,7 +5,7 @@ export class TriviaQuestion {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: false })
+  @Column({ nullable: false })
   body: string;
 
   @Column({ nullable: false })

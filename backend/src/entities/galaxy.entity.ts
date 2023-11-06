@@ -9,7 +9,7 @@ export class Galaxy {
   @Column({ nullable: false })
   name: string;
 
-  @Column({nullable: false})
+  @Column({ nullable: false })
   universe: string;
 
   @OneToMany(() => World, (world) => world.galaxy)
